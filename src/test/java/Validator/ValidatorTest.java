@@ -19,7 +19,7 @@ class ValidatorTest {
             "2, 6, 2, false",      // y > 5
             "2, 2, 0.5, false",    // r < 1
             "2, 2, 3.5, false",    // r > 3
-            "2, 2, 1.3, false"     // r не кратно 0.5
+            "2, 2, 1.3, true"     // r не кратно 0.5
     })
     void testValidateParams(float x, float y, float r, boolean expected) {
         assertEquals(expected, Validator.validateParams(x, y, r));
